@@ -10,22 +10,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body
-  class="h-screen bg-gradient-to-t from-slate-100 to-slate-500 m-auto">
+<body class="h-screen bg-gradient-to-t from-slate-100 to-slate-500 m-auto">
   <div class="">
-  <h1 class="uppercase text-indigo-800 text-5xl text-center m-5 font-black tracking-widest">Sök böcker</h1>
-  <main id="root" class="w-full md:w-4/5 mx-auto flex justify-center align-center flex-col gap-2">
+    <h1 class="uppercase text-indigo-800 text-5xl text-center m-5 font-black tracking-widest">Sök böcker</h1>
+    <main id="root" class="w-full md:w-4/5 mx-auto flex justify-center align-center flex-col gap-2">
 
-    <input
-      class="ring-4 bg-slate-200 w-1/2 place-self-center rounded-md p-2 text-center hover:bg-white hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/40 transition delay-100 ease-in-out"
-      id="searchField" type="text" placeholder="Ange författare eller boktitel..." />
-  </main>
+      <input
+        class="ring-4 bg-slate-200 w-1/2 place-self-center rounded-md p-2 text-center hover:bg-white hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/40 transition delay-100 ease-in-out"
+        id="searchField" type="text" placeholder="Ange författare eller boktitel..." />
+    </main>
   </div>
   <script src="api/api.js"></script>
+  <script src="Components/InfoCard.js"></script>
   <script src="Components/BookListItem.js"></script>
   <script src="Components/BookList.js"></script>
-  <!-- <script src="Components/BookListCard.js"></script>  -->
   <script src="script.js"></script>
+
 </body>
 
 </html>
