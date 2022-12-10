@@ -1,58 +1,76 @@
 "use strict";
 
 let bookList = [];
+
 window.addEventListener("load", () => {
   getAll().then((apiBooks) => (bookList = apiBooks));
 });
 
-searchField.addEventListener("keyup", (e) =>
-  renderBookList(
-    bookList.filter(({ title, author }) => {
-      const searchTerm = e.target.value.toLowerCase();
-      return (
-        title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        author.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    })
-  )
-);
+function filterBookList(bookList, searchTerm) {
+  return bookList.filter(({ title, author }) => {
+    return (
+      title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      author.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+}
+
+searchField.addEventListener("keyup", (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filteredBookList = filterBookList(bookList, searchTerm);
+  renderBookList(filteredBookList);
+});
+
 
 function renderBookList(bookList) {
-  const existingElement = document.querySelector(".book-list");
   const root = document.getElementById("root");
-  existingElement && root.removeChild(existingElement);
-  bookList.length > 0 &&
-    searchField.value &&
-    root.insertAdjacentHTML("beforeend", BookList(bookList));
+  const existingElement = document.querySelector(".book-list");
 
+  if (existingElement) {
+    root.removeChild(existingElement);
+  }
+
+  if (bookList.length === 0 || !searchField.value) {
+    return;
+  }
+
+  root.insertAdjacentHTML("beforeend", BookList(bookList));
+  addEventListeners(bookList);
+}
+
+function addEventListeners(bookList) {
   Array.from(document.getElementsByClassName("book-list__item")).forEach(
     (element) => {
       element.addEventListener("mouseover", (e) => {
-        var e = window.event;
-        const x_pos = e.pageX;
-        const y_pos = e.pageY;
-        const card = `<div id="card" class="absolute top-[${y_pos}px] left-[${x_pos}px]"></div>`;
+        const card = createCardElement(e);
         root.insertAdjacentHTML("afterbegin", card);
-
         const currentBook = getOne(e.target.id);
         currentBook.then((result) => renderBookItem(result));
       });
 
       element.addEventListener("mouseout", (e) => {
-        const card = document.getElementById("card");
-        card.remove();
+        removeCardElement();
       });
     }
   );
 }
 
+function createCardElement(event) {
+  const x_pos = event.pageX;
+  const y_pos = event.pageY;
+  return `<div id="card" class="absolute top-[${y_pos}px] left-[${x_pos}px]"></div>`;
+}
+
+function removeCardElement() {
+  const card = document.getElementById("card");
+  card.remove();
+}
+
 function renderBookItem(book) {
+  const card = document.getElementById("card");
   const existingElement = document.querySelector(".book-info");
-  if (document.getElementById("card")) {
-    existingElement &&
-      document.getElementById("card").removeChild(existingElement);
-    document
-      .getElementById("card")
-      .insertAdjacentHTML("afterbegin", InfoCard(book));
+  if (card) {
+    existingElement && card.removeChild(existingElement);
+    card.insertAdjacentHTML("afterbegin", InfoCard(book));
   }
 }
