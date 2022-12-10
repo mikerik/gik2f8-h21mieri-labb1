@@ -1,4 +1,4 @@
-# gik2f8-h21mieri-labb1
+# GIK2F8-h21mieri-labb1
 
 This is the repository for Labb 1 for the course GIK2F8 at Dalarna University.
 
@@ -6,23 +6,21 @@ This is the repository for Labb 1 for the course GIK2F8 at Dalarna University.
 
 To get started with this project, clone the repository to your local machine:
 
-`git clone <https://github.com/mikerik/gik2f8-h21mieri-labb1.git>`
+`git clone https://github.com/mikerik/gik2f8-h21mieri-labb1.git`
 
 ## Prerequisites
 
-In order to run this project, you will need to have the following dependencies installed:
+In order to run this project, you will need to have the following installed:
 
-- Dependency 1
-- Dependency 2
-- Dependency 3
+- Google Chrome, Mozilla Firefox, Microsoft Edge or similar
 
 ## Usage
 
 To use this project, follow these steps:
 
-1. Step 1
-2. Step 2
-3. Step 3
+1. Open the index.html file in a web browser
+2. Search for a book
+3. Move your cursor over any of the books in the generated list
 
 ## Contributing
 
