@@ -1,6 +1,6 @@
-# GIK2F8-h21mieri-labb1
+# GIK2F8 - Labb 1 - Sökfunktion
 
-This is the repository for Labb 1 for the course GIK2F8 at Dalarna University.
+This is the repository for "Labb 1 - Sökfunktion" for the course GIK2F8 at Dalarna University.
 
 ## Getting Started
 
@@ -12,14 +12,14 @@ To get started with this project, clone the repository to your local machine:
 
 In order to run this project, you will need to have the following installed:
 
-- Google Chrome, Mozilla Firefox, Microsoft Edge or similar
+- A web browser such as [Google Chrome](https://www.google.com/chrome/), [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/), [Microsoft Edge](https://www.microsoft.com/en-us/edge) or similar.
 
 ## Usage
 
 To use this project, follow these steps:
 
-1. Open the index.html file in a web browser
-2. Search for a book
+1. Open the [index.html](index.html) file in a web browser
+2. Search for an author or a book title
 3. Move your cursor over any of the books in the generated list
 
 ## Contributing
