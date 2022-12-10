@@ -10,16 +10,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen bg-gradient-to-t from-slate-100 to-slate-500 m-auto">
-  <div class="">
-    <h1 class="uppercase text-indigo-800 text-5xl text-center m-5 font-black tracking-widest">Sök böcker</h1>
-    <main id="root" class="w-full md:w-4/5 mx-auto flex justify-center align-center flex-col gap-2">
+<body class="leading-[1.6] h-screen place-items-center font-sans m-0">
 
-      <input
-        class="ring-4 bg-slate-200 w-1/2 place-self-center rounded-md p-2 text-center hover:bg-white hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/40 transition delay-100 ease-in-out"
-        id="searchField" type="text" placeholder="Ange författare eller boktitel..." />
-    </main>
-  </div>
+  <main id="root" class="w-full md:w-4/5 mx-auto flex justify-center align-center flex-col gap-2">
+  <h1 class="uppercase text-indigo-800 text-3xl tracking-widest place-self-center m-10">Sök böcker</h1>
+
+    <input
+      class="ring-4 bg-slate-200 w-1/2 place-self-center rounded-md p-2 text-center hover:bg-white hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/40 transition delay-100 ease-in-out"
+      id="searchField" type="text" placeholder="Ange författare eller boktitel..." />
+  </main>
+
   <script src="api/api.js"></script>
   <script src="Components/InfoCard.js"></script>
   <script src="Components/BookListItem.js"></script>
@@ -29,3 +29,8 @@
 </body>
 
 </html>
+
+
+<!-- <body class="leading-[1.6] h-screen bg-gradient-to-t from-slate-100 to-slate-500 m-auto"></body> -->
+
+<!--   -->
