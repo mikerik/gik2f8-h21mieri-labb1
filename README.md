@@ -5,6 +5,7 @@ This is the repository for Labb 1 for the course GIK2F8 at Dalarna University.
 ## Getting Started
 
 To get started with this project, clone the repository to your local machine:
+
 `git clone <https://github.com/mikerik/gik2f8-h21mieri-labb1.git>`
 
 ## Prerequisites
